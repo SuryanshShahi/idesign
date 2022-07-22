@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#LandingPage .container::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-tabs .btn-danger {
+  background-color: transparent;
+  width: 160px;
+  color: black;
+  height: 38px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.nav-tabs .btn-danger:hover {
+  background-color: #ff3e6c;
+  border: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-tabs .btn-danger.active {
+  background-color: #ff3e6c;
+  border: none;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-tabs {
+  border-bottom: none !important;
+}
+
+.carscard {
+  margin-bottom: 30px;
+  overflow: hidden;
+  min-height: 390px;
+  border: none;
+  box-shadow: 1px 2px 5px 0px #aaaaaa;
+  color: black;
+}
+
+.details {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -50px;
+  transition: all ease-in-out 0.2s;
+}
+
+.carscard:hover .details {
+  opacity: 1;
+  bottom: 0;
+  z-index: 999;
+  color: white;
+}
+.wishlist {
+  border: 1px solid #d4d5d9;
+  cursor: pointer;
+}
+.wishlist:hover {
+  border: 1px solid black;
+}
+
+.swal-text {
+  font-weight: 500;
+  font-size: 20px;
+  color: rgb(99, 99, 99);
 }
