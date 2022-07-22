@@ -321,12 +321,12 @@ function Home() {
 
           <div className="container">
             <div className="row">
-             
-          
               <div
                 className="col-lg-6 col-md-6 col-12"
                 style={{ fontWeight: "500" }}
-              > <b>Price Range:</b>
+              >
+                {" "}
+                <b>Price Range:</b>
                 <div className="d-flex">
                   <input
                     type="radio"
@@ -400,27 +400,27 @@ function Home() {
               </div>
 
               <div className="col-lg-6 col-md-6 col-12 ">
-              <div className="justify-content-center my-3 d-flex">
-                <div
-                  className="btn btn-danger mx-2"
-                  onClick={() => sortByDiscount()}
-                >
-                  sortByDiscount
-                </div>
-                <div
-                  className="btn btn-danger mx-2"
-                  onClick={() => sortByPrice()}
-                >
-                  sortByPrice
-                </div>
-                <div
-                  className="btn btn-danger mx-2"
-                  onClick={() => sortByRating()}
-                >
-                  sortByRating
+                <div className="justify-content-center my-3 d-flex">
+                  <div
+                    className="btn btn-danger mx-2"
+                    onClick={() => sortByDiscount()}
+                  >
+                    sortByDiscount
+                  </div>
+                  <div
+                    className="btn btn-danger mx-2"
+                    onClick={() => sortByPrice()}
+                  >
+                    sortByPrice
+                  </div>
+                  <div
+                    className="btn btn-danger mx-2"
+                    onClick={() => sortByRating()}
+                  >
+                    sortByRating
+                  </div>
                 </div>
               </div>
-            </div>
             </div>
           </div>
         </div>
