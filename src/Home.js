@@ -320,98 +320,107 @@ function Home() {
           </div>
 
           <div className="container">
-            <b>Price Range:</b>
-            <div className=" justify-content-center d-flex">
+            <div className="row">
+             
+          
               <div
-                className="btn btn-danger mx-2"
-                onClick={() => sortByDiscount()}
-              >
-                sortByDiscount
+                className="col-lg-6 col-md-6 col-12"
+                style={{ fontWeight: "500" }}
+              > <b>Price Range:</b>
+                <div className="d-flex">
+                  <input
+                    type="radio"
+                    name="radio"
+                    style={{ cursor: "pointer" }}
+                    onClick={() => filterByPrice(1)}
+                    className="form-check mr-2"
+                  />
+                  $0 - $50
+                </div>
+                <div className="d-flex">
+                  <input
+                    type="radio"
+                    name="radio"
+                    style={{ cursor: "pointer" }}
+                    onClick={() => filterByPrice(2)}
+                    className="form-check mr-2"
+                  />
+                  $50 - $100
+                </div>
+                <div className="d-flex">
+                  <input
+                    type="radio"
+                    name="radio"
+                    style={{ cursor: "pointer" }}
+                    onClick={() => filterByPrice(3)}
+                    className="form-check mr-2"
+                  />
+                  $100 - $200
+                </div>
+                <div className="d-flex">
+                  <input
+                    type="radio"
+                    name="radio"
+                    style={{ cursor: "pointer" }}
+                    onClick={() => filterByPrice(4)}
+                    className="form-check mr-2"
+                  />
+                  $200 - $400
+                </div>
+                <div className="d-flex">
+                  <input
+                    type="radio"
+                    name="radio"
+                    style={{ cursor: "pointer" }}
+                    onClick={() => filterByPrice(5)}
+                    className="form-check mr-2"
+                  />
+                  $400 - $800
+                </div>
+                <div className="d-flex">
+                  <input
+                    type="radio"
+                    name="radio"
+                    style={{ cursor: "pointer" }}
+                    onClick={() => filterByPrice(6)}
+                    className="form-check mr-2"
+                  />
+                  $800 - $1600
+                </div>
+                <div className="d-flex">
+                  <input
+                    type="radio"
+                    name="radio"
+                    style={{ cursor: "pointer" }}
+                    onClick={() => filterByPrice(7)}
+                    className="form-check mr-2"
+                  />
+                  Above $1600
+                </div>
               </div>
-              <div
-                className="btn btn-danger mx-2"
-                onClick={() => sortByPrice()}
-              >
-                sortByPrice
-              </div>
-              <div
-                className="btn btn-danger mx-2"
-                onClick={() => sortByRating()}
-              >
-                sortByRating
+
+              <div className="col-lg-6 col-md-6 col-12 ">
+              <div className="justify-content-center my-3 d-flex">
+                <div
+                  className="btn btn-danger mx-2"
+                  onClick={() => sortByDiscount()}
+                >
+                  sortByDiscount
+                </div>
+                <div
+                  className="btn btn-danger mx-2"
+                  onClick={() => sortByPrice()}
+                >
+                  sortByPrice
+                </div>
+                <div
+                  className="btn btn-danger mx-2"
+                  onClick={() => sortByRating()}
+                >
+                  sortByRating
+                </div>
               </div>
             </div>
-            <div className="" style={{ fontWeight: "500" }}>
-              <div className="d-flex">
-                <input
-                  type="radio"
-                  name="radio"
-                  style={{ cursor: "pointer" }}
-                  onClick={() => filterByPrice(1)}
-                  className="form-check mr-2"
-                />
-                $0 - $50
-              </div>
-              <div className="d-flex">
-                <input
-                  type="radio"
-                  name="radio"
-                  style={{ cursor: "pointer" }}
-                  onClick={() => filterByPrice(2)}
-                  className="form-check mr-2"
-                />
-                $50 - $100
-              </div>
-              <div className="d-flex">
-                <input
-                  type="radio"
-                  name="radio"
-                  style={{ cursor: "pointer" }}
-                  onClick={() => filterByPrice(3)}
-                  className="form-check mr-2"
-                />
-                $100 - $200
-              </div>
-              <div className="d-flex">
-                <input
-                  type="radio"
-                  name="radio"
-                  style={{ cursor: "pointer" }}
-                  onClick={() => filterByPrice(4)}
-                  className="form-check mr-2"
-                />
-                $200 - $400
-              </div>
-              <div className="d-flex">
-                <input
-                  type="radio"
-                  name="radio"
-                  style={{ cursor: "pointer" }}
-                  onClick={() => filterByPrice(5)}
-                  className="form-check mr-2"
-                />
-                $400 - $800
-              </div>
-              <div className="d-flex">
-                <input
-                  type="radio"
-                  name="radio"
-                  style={{ cursor: "pointer" }}
-                  onClick={() => filterByPrice(6)}
-                  className="form-check mr-2"
-                />
-                $800 - $1600
-              </div>
-              <div className="d-flex">
-                <input
-                  type="radio"
-                  name="radio"
-                  style={{ cursor: "pointer" }}
-                  onClick={() => filterByPrice(7)}
-                  className="form-check mr-2"
-                />
-                Above $1600
-              </div>
             </div>
           </div>
         </div>
@@ -576,9 +585,7 @@ function Home() {
               return (
                 <div className="px-lg-3" key={e.id}>
                   <div className="modal-header">
-                    <h1>
-                      ECOMM
-                    </h1>
+                    <h1>ECOMM</h1>
                     <div
                       className="close pr-lg-2 mr-lg-1 pr-md-4 pr-sm-4 pr-4 pt-4 "
                       data-dismiss="modal"
@@ -591,51 +598,91 @@ function Home() {
                     <span className="text-danger font-weight-bold">Cart</span>
                   </h4>
                   <div
-                      className="card carscard text-decoration-none mx-3 mt-1"
-                      data-bs-toggle="tooltip"
-                      //   title={e.title}
+                    className="card carscard text-decoration-none mx-3 mt-1"
+                    data-bs-toggle="tooltip"
+                    //   title={e.title}
+                  >
+                    <NavLink
+                      target="_blank"
+                      to={`/products/${e.id}`}
+                      className="justify-content-center d-flex"
                     >
-                      <NavLink
-                        target="_blank"
-                        to={`/products/${e.id}`}
-                        className="justify-content-center d-flex"
-                      >
-                        <div>
-                          <img
-                            src={e.thumbnail}
-                            alt="menuPic"
-                            height="250px"
-                            onClick={() => lowtohigh(e.price)}
-                            className="card-img-top p-3"
-                          />
-                        </div>
-                      </NavLink>
+                      <div>
+                        <img
+                          src={e.thumbnail}
+                          alt="menuPic"
+                          height="250px"
+                          onClick={() => lowtohigh(e.price)}
+                          className="card-img-top p-3"
+                        />
+                      </div>
+                    </NavLink>
 
-                      <div className="details text-dark bg-white pt-2 px-2">
-                        <div className="justify-content-center d-flex align-items-center wishlist">
-                          <div
-                            className={
-                              !isActive
-                                ? "fa fa-shopping-bag py-2"
-                                : "fa fa-shopping-bag text-danger py-2"
-                            }
-                            onClick={() => {
-                              setActive(true), addtobag(e.id);
-                            }}
-                          >
-                            &nbsp;&nbsp;ADD TO CART
-                          </div>
-                        </div>
+                    <div className="details text-dark bg-white pt-2 px-2">
+                      <div className="justify-content-center d-flex align-items-center wishlist">
                         <div
-                          className="pt-2"
-                          style={{
-                            fontSize: "16px",
-                            fontWeight: "500",
-                            color: "black",
+                          className={
+                            !isActive
+                              ? "fa fa-shopping-bag py-2"
+                              : "fa fa-shopping-bag text-danger py-2"
+                          }
+                          onClick={() => {
+                            setActive(true), addtobag(e.id);
                           }}
                         >
-                          {e.brand}
+                          &nbsp;&nbsp;ADD TO CART
                         </div>
+                      </div>
+                      <div
+                        className="pt-2"
+                        style={{
+                          fontSize: "16px",
+                          fontWeight: "500",
+                          color: "black",
+                        }}
+                      >
+                        {e.brand}
+                      </div>
+                      <div
+                        style={{
+                          fontSize: "14px",
+                          fontWeight: "lighter",
+                          color: "grey",
+                        }}
+                      >
+                        {e.description}
+                      </div>
+                      <div className="pt-1">
+                        <span
+                          style={{
+                            fontWeight: "500",
+                          }}
+                        >
+                          $ {e.price}
+                        </span>
+                        <span
+                          className="text-success"
+                          style={{
+                            fontSize: "12px",
+                            fontWeight: "500",
+                          }}
+                        >
+                          &nbsp;&nbsp;{e.discountPercentage}% DISCOUNT
+                        </span>
+                      </div>
+                      <div className="justify-content-center d-flex my-3">
+                        <div
+                          className="btn btn-danger rounded-pill px-5 border-0"
+                          onClick={() => stockAlert(e.stock)}
+                        >
+                          Buy Now
+                        </div>
+                      </div>
+                    </div>
+                    <div className="px-2">
+                      <div className="font-weight-bolder my-2">
+                        <span style={{ fontWeight: "500" }}>{e.title}</span>
+
                         <div
                           style={{
                             fontSize: "14px",
@@ -643,8 +690,9 @@ function Home() {
                             color: "grey",
                           }}
                         >
-                          {e.description}
+                          {e.category}
                         </div>
+
                         <div className="pt-1">
                           <span
                             style={{
@@ -656,77 +704,36 @@ function Home() {
                           <span
                             className="text-success"
                             style={{
-                              fontSize: "12px",
                               fontWeight: "500",
+                              fontSize: "12px",
                             }}
                           >
                             &nbsp;&nbsp;{e.discountPercentage}% DISCOUNT
                           </span>
                         </div>
-                        <div className="justify-content-center d-flex my-3">
-                          <div
-                            className="btn btn-danger rounded-pill px-5 border-0"
-                            onClick={() => stockAlert(e.stock)}
-                          >
-                            Buy Now
-                          </div>
+                        <div
+                          className="text-danger mt-2"
+                          style={{ fontSize: "14px" }}
+                        >
+                          {e.stock} items left
                         </div>
-                      </div>
-                      <div className="px-2">
-                        <div className="font-weight-bolder my-2">
-                          <span style={{ fontWeight: "500" }}>{e.title}</span>
-
-                          <div
-                            style={{
-                              fontSize: "14px",
-                              fontWeight: "lighter",
-                              color: "grey",
-                            }}
-                          >
-                            {e.category}
-                          </div>
-
-                          <div className="pt-1">
-                            <span
-                              style={{
-                                fontWeight: "500",
-                              }}
-                            >
-                              $ {e.price}
-                            </span>
-                            <span
-                              className="text-success"
-                              style={{
-                                fontWeight: "500",
-                                fontSize: "12px",
-                              }}
-                            >
-                              &nbsp;&nbsp;{e.discountPercentage}% DISCOUNT
-                            </span>
-                          </div>
-                          <div
-                            className="text-danger mt-2"
-                            style={{ fontSize: "14px" }}
-                          >
-                            {e.stock} items left
-                          </div>
-                          <div
-                            className="d-flex align-items-center"
-                            style={{ fontSize: "14px" }}
-                          >
-                            {e.rating}&nbsp;
-                            <StarsRating
-                              className=""
-                              count={5}
-                              size={20}
-                              value={e.rating}
-                              edit={false}
-                              color2={"#ffd700"}
-                            />
-                          </div>
+                        <div
+                          className="d-flex align-items-center"
+                          style={{ fontSize: "14px" }}
+                        >
+                          {e.rating}&nbsp;
+                          <StarsRating
+                            className=""
+                            count={5}
+                            size={20}
+                            value={e.rating}
+                            edit={false}
+                            color2={"#ffd700"}
+                          />
                         </div>
                       </div>
                     </div>
+                  </div>
                 </div>
               );
             })}
